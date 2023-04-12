@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* 定义整个页面的样式 */
+body {
+	width: 100%;
+	height: 100%;
+  	font-family: Arial, sans-serif;
+  	background-color: #f0f0f0;
+  	text-align: center;			/*内容居中*/
+	position: absolute;			/*绝对定位*/
+    top: 0px;					/*距离顶部0像素*/
+    left: 0;					/*距离左侧边界0px*/
+}
+
+*{	/*清除所有标签的初始内外边框*/
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/* 定义登录表单的容器 */
+.container {
+  	width: 300px;
+  	max-height: 250px; /*添加最大高度为300像素*/
+  	margin: 100px auto;
+  	padding: 20px;
+  	border: 1px solid #ccc;
+  	background-color: #fff;
+  	text-align: center;			/*内容居中*/
+}
+
+.container a{
+    text-align: center;			/*内容居中*/
+}
+
+.container form{
+	margin: 20px;
+	padding: 0px;
+    text-align: center;			/*内容居中*/
+    margin: 30px; 				/* 设置左右外边距，使form居中 */ 
+    
+}
+
+.button {
+	
+		text-align: center;			/*内容居中*/
+	display: block;
+  	
+  	width: 70px;
+  	height: 20px;
+}
+
+/* 定义登录表单的标题 */
+.title {
+  text-align: center;
+  font-size: 24px;
+  text-align: center;			/*内容居中*/
+  color:#000080;	
+}
+
+/* 定义登录表单中的输入框的样式 */
+.select {
+
+	vertical-align: middle;		/*竖直居中*/
+  	width: 90%;
+  	margin: 10px auto;
+  	text-align: center;			/*内容居中*/
+  	height:20px;
+  	
+}
+
