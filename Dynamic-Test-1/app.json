@@ -3,7 +3,8 @@
     "pages/loginin/loginin",
     "pages/request/request",
     "pages/news/news",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/mobile/mobile"
   ],
   "window":{
     "backgroundTextStyle":"light",

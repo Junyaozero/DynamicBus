@@ -1,6 +1,6 @@
 Page({
     data:{
-        disabled:false,//丧失能力
+        disabled:true,//丧失能力
         btnstate:"default",
         account:"",
         password:""
@@ -12,7 +12,7 @@ Page({
         if(content!=""){
             this.setData({disabled:false,btnstate:"primary",account:content});
         }else{
-            this.setData({disabled:false,btnstate:"default"})
+            this.setData({disabled:true,btnstate:"default"})
         }
     },
     pwdBlur:function(e){
@@ -20,5 +20,15 @@ Page({
         if(password != ""){
             this.setData({password:password});
         }
-    } 
+    },
+    navigate(){
+        wx.navigateTo({
+          url: '/pages/mobile/mobile',
+          success(res){
+            console.log(res)
+          },fail(err){
+            console.error(err)
+          }
+        })
+      }
 })

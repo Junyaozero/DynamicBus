@@ -1,5 +1,5 @@
 Page({
-    data:{
+    data:{ 
     disabled:true,
     btnstate:"default",
     mobile:""
