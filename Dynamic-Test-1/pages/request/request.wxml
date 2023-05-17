@@ -63,5 +63,10 @@
     </view> 
 </view>
 
+<view style="margin-top: 300rpx; display: flex;">
+<button>提交</button>
+</view>
 
 </view>
+
+

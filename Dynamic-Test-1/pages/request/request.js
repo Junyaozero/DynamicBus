@@ -17,7 +17,7 @@ Page({
      
     bindShowMsg() {
       this.setData({
-        select:!this.data.select
+          select:!this.data.select
       })
   },
     bindShowMsgTwo() {
@@ -29,13 +29,15 @@ Page({
    
     //  点击的时候接收传过来的值
     //  赋值到这个变量上tihuoWay
- 
+    //  并且隐藏下拉列表 
+     
   mySelect(e) {
      var name = e.currentTarget.dataset.name
      this.setData({
         tihuoWay: name,
          select: false
      })
+     
   },
   mySelectTwo(e) {
      var name = e.currentTarget.dataset.name
