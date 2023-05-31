@@ -4,7 +4,9 @@
     "pages/request/request",
     "pages/news/news",
     "pages/me/me",
-    "pages/mobile/mobile"
+    "pages/mobile/mobile",
+    "pages/Viewing/Viewing"
+
   ],
   "window":{
     "backgroundTextStyle":"light",

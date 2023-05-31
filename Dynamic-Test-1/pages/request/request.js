@@ -46,6 +46,16 @@ Page({
           SelectTwo: false
      })
   },
+  request(){
+    wx.navigateTo({
+      url: '../Viewing/Viewing',
+      success(res){
+        console.log(res)
+      },fail(err){
+        console.error(err)
+      }
+    })
+  }
   
     
   })
