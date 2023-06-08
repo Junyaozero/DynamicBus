@@ -5,6 +5,7 @@
       "pages/news/news",
       "pages/me/me",
       "pages/mobile/mobile",
+      "pages/findPwd/findPwd",
       "pages/Viewing/Viewing"
   
     ],

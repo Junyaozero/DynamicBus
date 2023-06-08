@@ -1,9 +1,9 @@
-<form bindsubmit="btnSub">
+<form bindsubmit="btnSubmit">
 <view class="content">
     <view class="account">
         <view class="title">账号</view>
         <view class="num">
-            <input name="userName" bindinput="accountInput" placeholder="手机号" placeholder-style="color:#999999;"/>
+            <input name="userName" selectable="true" bindinput="accountInput" placeholder="手机号" placeholder-style="color:#999999;"/>
         </view>
     </view>
     <view class="hr"></view>
@@ -19,8 +19,8 @@
 
 
     <view class="operate">
-        <view><navigator bindtap="navigate" url="pages/mobile/mobile">手机快速注册</navigator></view>
-        <view>找回密码</view>
+        <view><navigator bindtap="toRegister" url="pages/mobile/mobile">手机快速注册</navigator></view>
+        <view><navigator bindtap="toFindPwd" url="/pages/findPwd/findPwd">找回密码</navigator></view>
     </view>
     <view class="login">
         <view><image src="../images/wxlogin.png" style="width: 60px;height: 60px;"></image></view>
