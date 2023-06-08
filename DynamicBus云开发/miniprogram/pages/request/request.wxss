@@ -1,10 +1,10 @@
 /* pages/request/request.wxss */
+
 .list-msg {
     padding: 0 20rpx;
-    background-color: #fff;
     position: relative;
   }
-  
+
   .list-msg1 {
     height: 60rpx;
     display: flex;
@@ -79,7 +79,7 @@
   .h{
     height: 300rpx;
  }
- 
+
 
   .select_one {
     height: 60rpx;

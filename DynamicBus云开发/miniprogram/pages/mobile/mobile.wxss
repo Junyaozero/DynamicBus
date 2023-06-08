@@ -4,7 +4,7 @@
     background-color: #f2f2f2;
 }
 .hr{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .numbg{
     border: 1px solid #cccccc;

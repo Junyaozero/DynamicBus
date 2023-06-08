@@ -1,19 +1,23 @@
+<form bindsubmit="btnSub">
 <view class="content">
     <view class="account">
         <view class="title">账号</view>
         <view class="num">
-            <input bindinput="accountInput" placeholder="用户名/手机号" placeholder-style="color:#999999;"/>
+            <input name="userName" bindinput="accountInput" placeholder="手机号" placeholder-style="color:#999999;"/>
         </view>
     </view>
     <view class="hr"></view>
     <view class="account">
         <view class="title">密码</view>
         <view class="num">
-            <input bindblur="pwdBlur" placeholder="请输入密码" password placeholder-style="color:#999999;"/>
+            <input name="userPwd" bindblur="pwdBlur" placeholder="请输入密码" password placeholder-style="color:#999999;"/>
         </view>
     </view>
     <view class="hr"></view>
-    <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" bindtap="login">登录</button>
+    <button class="btn" form-type="submit" disabled="{{disabled}}" type="{{btnstate}}" bindtap="login">登录</button>
+
+
+
     <view class="operate">
         <view><navigator bindtap="navigate" url="pages/mobile/mobile">手机快速注册</navigator></view>
         <view>找回密码</view>
@@ -23,3 +27,4 @@
         <view><image src="../images/QQlogin.png" style="width: 60px;height: 60px;"></image></view>
     </view>
 </view>
+</form>
