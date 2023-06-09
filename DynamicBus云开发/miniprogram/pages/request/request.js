@@ -47,15 +47,34 @@ Page({
      })
   },
   request(){
-    wx.navigateTo({
-      url: '../Viewing/Viewing',
-      success(res){
-        console.log(res)
-      },fail(err){
-        console.error(err)
-      }
-    })
-  }
-  
-    
+    // 获取登录状态
+    var isLogin = wx.getStorageSync('isLogin');
+    if (isLogin) {
+        wx.navigateTo({
+            url: '../Viewing/Viewing',
+            success(res){
+              console.log(res)
+            },fail(err){
+              console.error(err)
+            }
+        })
+    } else{
+        // 未登录，弹出提示框并跳转到登录页面
+        wx.showToast({ 
+            title: '您还没有登录', 
+            icon: 'error',
+            duration: 2000 
+            }) 
+        setTimeout(function() {
+            wx.switchTab({
+                url: '../loginin/loginin'
+            })
+        }, 2000);
+    }
+
+
+   
+  },
+
+
   })
