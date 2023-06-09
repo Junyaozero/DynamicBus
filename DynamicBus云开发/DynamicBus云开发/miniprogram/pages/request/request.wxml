@@ -1,0 +1,74 @@
+<!--pages/request/request.wxml-->
+
+<!-- 整个需求页面 -->
+
+<view class='list-msg'>
+<view style="margin-top: 100rpx; display: flex;">
+
+
+ <view class='list-msg1'>上车地点</view>
+<!--下拉框 -->
+   <!-- bindtap点击触发事件，点击下拉框可以出现下拉列表 -->
+   <view class='list-msg2' bindtap='bindShowMsg' >
+        <!-- 下拉框“---请选择---” -->
+        <text >{{tihuoWay}}</text>  
+        <!-- 也可以<text>---请选择---</text> -->
+   </view>
+
+     <!-- select 判断是否显示隐藏下拉列表-->
+     <view class="select_box" wx:if="{{select}}"> 
+        <!-- 滚动条 -->
+        <scroll-view scroll-y="true" style="height: 220rpx;" class="h" scroll-with-animation="true">
+<!-- 下拉需要显示的列表   -->
+<!-- data-name 下拉列表里的内容 -->
+ <view class="select_one" bindtap="mySelect" data-name="明德楼">明德楼</view>
+ <view class="select_one" bindtap="mySelect" data-name="弘毅楼">弘毅楼</view>
+ <view class="select_one" bindtap="mySelect" data-name="天佑楼">天佑楼</view>
+ <view class="select_one" bindtap="mySelect" data-name="艺悦楼">艺悦楼</view>
+ <view class="select_one" bindtap="mySelect" data-name="知行楼">知行楼</view>
+ <view class="select_one" bindtap="mySelect" data-name="求是楼">求是楼</view>
+ <view class="select_one" bindtap="mySelect" data-name="南苑">南苑</view>
+ <view class="select_one" bindtap="mySelect" data-name="校医务室">校医务室</view>
+ <view class="select_one" bindtap="mySelect" data-name="二饭">二饭</view>
+</scroll-view>
+   </view> 
+</view>
+
+
+
+<view style="margin-top: 300rpx; display: flex;">
+ <view class='list-msg1'>下车地点</view>
+<!--下拉框 -->
+   <view class='list-box2' bindtap='bindShowMsgTwo' >
+    <text >{{tihuoWayTwo}}</text>  
+   </view>
+<!-- 下拉需要显示的列表   -->
+<!-- select 判断是否显示隐藏 -->
+<!-- data-name 下拉列表里的内容 -->
+     <view class="select2_box" wx:if="{{SelectTwo}}"> 
+
+        <scroll-view scroll-y="true" style="height: 220rpx;" class="h" scroll-with-animation="true">
+
+ <view class="select_one" bindtap="mySelectTwo" data-name="明德楼">明德楼</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="弘毅楼">弘毅楼</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="天佑楼">天佑楼</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="艺悦楼">艺悦楼</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="知行楼">知行楼</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="求是楼">求是楼</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="南苑">南苑</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="校医务室">校医务室</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="二饭">二饭</view>
+
+</scroll-view>
+
+    </view> 
+</view>
+
+<view style="margin-top: 300rpx; display: flex;">
+    <button bindtap="request" class="btn" type="primary" >提交</button> 
+</view>
+
+</view>
+
+
+
