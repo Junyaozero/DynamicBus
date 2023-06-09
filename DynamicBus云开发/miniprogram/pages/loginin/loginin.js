@@ -5,7 +5,6 @@ Page({
     data:{
         disabled:true,//丧失能力
         btnstate:"default",
-        account:"",
         userName: "",
         userPwd: ""
     },
