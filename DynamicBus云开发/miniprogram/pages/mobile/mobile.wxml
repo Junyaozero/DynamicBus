@@ -9,7 +9,7 @@
     <view class="hr"></view>
     <view class="numbg">
         <view><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
-        <view><input name="userPwd" type="password" placeholder="请设置密码" maxlength="20" bindinput="userPwd"/></view>
+        <view><input name="userPwd" type="password"  selectable="true" placeholder="请设置密码" maxlength="20" bindinput="userPwd"/></view>
     </view>
     <view>
         <view class="xieyi">

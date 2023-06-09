@@ -48,6 +48,10 @@ Page({
     //提交表单添加进数据库
     btnSubmit(res){
     console.log(res)
+    wx.showLoading({
+        title: '数据加载中……',
+        mask:true
+      })
     // 老方法取数据 
 
     // var userName = res.detail.value.userName;
@@ -69,22 +73,35 @@ Page({
        
     }).then(res=>{
         console.log(res)
+        wx.hideLoading()
         if (res._id) {
             // 注册成功，跳转到登录页面
-            wx.switchTab({
-              url: '/pages/loginin/loginin' ,
-              success: function(res) {
-                console.log("跳转成功");
-              },
-              fail: function(res) {
-                console.log("跳转失败");
-              }
+           
+            wx.showToast({ 
+            title: '注册成功', 
+            icon: 'success',
+            duration: 2000 
+            }) 
+            //setTimeout函数来延迟跳转到登录页面,延迟2秒
+            setTimeout(function(){
+                wx.switchTab({
+                url: '/pages/loginin/loginin' ,
+                success: function(res) {
+                    console.log("跳转成功");
+                },
+                fail: function(res) {
+                    console.log("跳转失败");
+                }
             });
+            }, 2000);
+        
+            
           } else {
             // 注册失败，重置表单并提示错误信息
             wx.showToast({
               title: '注册失败，请重试',
-              icon: 'none'
+              icon: 'none',
+              duration: 2000 
             });
             this.setData({
               userName: "",
