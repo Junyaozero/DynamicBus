@@ -38,7 +38,7 @@
 <view style="margin-top: 300rpx; display: flex;">
  <view class='list-msg1'>下车地点</view>
 <!--下拉框 -->
-   <view class='list-box2' bindtap='bindShowMsgTwo' >
+   <view class='list-box2' bindtap='bindTwo' >
     <text >{{tihuoWayTwo}}</text>  
    </view>
 <!-- 下拉需要显示的列表   -->
@@ -63,10 +63,5 @@
     </view> 
 </view>
 
-<view style="margin-top: 300rpx; display: flex;">
-    <button bindtap="request" class="btn" type="primary" >提交</button> 
-</view>
 
 </view>
-
-

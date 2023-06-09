@@ -1,4 +1,3 @@
-/* pages/request/request.wxss */
 .list-msg {
     padding: 0 20rpx;
     background-color: #fff;

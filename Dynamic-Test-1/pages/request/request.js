@@ -20,7 +20,7 @@ Page({
           select:!this.data.select
       })
   },
-    bindShowMsgTwo() {
+  bindTwo() {
       this.setData({
         SelectTwo:!this.data.SelectTwo
       })
@@ -37,7 +37,7 @@ Page({
         tihuoWay: name,
          select: false
      })
-     
+     console.log(name)
   },
   mySelectTwo(e) {
      var name = e.currentTarget.dataset.name
@@ -46,16 +46,6 @@ Page({
           SelectTwo: false
      })
   },
-  request(){
-    wx.navigateTo({
-      url: '../Viewing/Viewing',
-      success(res){
-        console.log(res)
-      },fail(err){
-        console.error(err)
-      }
-    })
-  }
   
     
   })
