@@ -62,6 +62,8 @@
 
     </view> 
 </view>
-
+<view style="margin-top: 300rpx; display: flex;">
+    <button bindtap="request" class="btn" type="primary" >提交</button> 
+</view>
 
 </view>

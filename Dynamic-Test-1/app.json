@@ -3,8 +3,12 @@
     "pages/loginin/loginin",
     "pages/request/request",
     "pages/news/news",
-    "pages/me/me",
-    "pages/mobile/mobile"
+    "pages/person/person",
+    "pages/mobile/mobile",
+    "pages/Viewing/Viewing",
+    "pages/us/us",
+    "pages/logs/logs",
+    "pages/opinion/opinion"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -35,7 +39,7 @@
             "selectedIconPath": "pages/images/news1.png"
           },
           {
-            "pagePath":"pages/me/me",
+            "pagePath":"pages/person/person",
             "text":"我的",
             "iconPath": "pages/images/me.png",
             "selectedIconPath": "pages/images/me1.png"
