@@ -7,7 +7,6 @@
     "pages/mobile/mobile",
     "pages/Viewing/Viewing",
     "pages/us/us",
-    "pages/logs/logs",
     "pages/opinion/opinion"
   ],
   "window":{
