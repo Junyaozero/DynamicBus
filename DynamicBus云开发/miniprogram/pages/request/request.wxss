@@ -57,8 +57,8 @@
     padding: 0 10rpx;
     width: 55%;
     position: absolute;
-    top: 80rpx;
-    left: 220rpx;
+    top: 170rpx;
+    left: 195rpx;
     z-index: 1;
     overflow: hidden;
   }
@@ -68,15 +68,15 @@
     width: 55%;
     position: absolute;
      /* 上下调节下车地点下拉列表 */
-    top: 450rpx;   
+    top: 530rpx;   
     /* 左右调节下车地点下拉列表 */
-    left: 220rpx;
+    left: 195rpx;
     z-index: 1;
     overflow: hidden;
   }
   
 
-  .h{
+  .scroll-bar{
     height: 300rpx;
  }
 

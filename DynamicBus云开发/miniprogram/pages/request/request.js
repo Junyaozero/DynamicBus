@@ -3,18 +3,17 @@ Page({
 
     
     //页面的初始数据
-    
     data: {
-      select: false,  //先进行初始化，判断下拉列表的显示隐藏
-      tihuoWay: '请选择',  //先初始化一个值（内容），点击选择下拉列表后的值赋值到这个变量上显示到页面上
+      select: false,  //先进行初始化，判断下拉列表是显示隐藏的
+      boardingPoint: '请选择',  //先初始化一个值（内容）
       SelectTwo: false,  
-      tihuoWayTwo: '请选择' 
+      dropoffPoint: '请选择' 
     },
    
     
     //  点击事件
-    //  点击的时候控制下拉需要显示的列表是显示还是隐藏
-     
+    //  点击的时候控制下拉列表是显示的
+     //取反，类似开关操作
     bindShowMsg() {
       this.setData({
           select:!this.data.select
@@ -27,14 +26,14 @@ Page({
   },
     
    
-    //  点击的时候接收传过来的值
-    //  赋值到这个变量上tihuoWay
+    //  点击的时候接收传过来的值,选中的上下车地点
+    //  赋值到这个变量上boardingPoint
     //  并且隐藏下拉列表 
      
   mySelect(e) {
      var name = e.currentTarget.dataset.name
      this.setData({
-        tihuoWay: name,
+        boardingPoint: name,
          select: false
      })
      
@@ -42,7 +41,7 @@ Page({
   mySelectTwo(e) {
      var name = e.currentTarget.dataset.name
      this.setData({
-        tihuoWayTwo: name,
+        dropoffPoint: name,
           SelectTwo: false
      })
   },
@@ -50,14 +49,40 @@ Page({
     // 获取登录状态
     var isLogin = wx.getStorageSync('isLogin');
     if (isLogin) {
+        const that = this
+
+        //判断上下车地点是否相同
+        if(that.data.boardingPoint == that.data.dropoffPoint){
+            wx.showToast({
+              title: '请重新选择',
+              icon: 'error',
+              duration: 2000
+            })
+            return
+        }
+        
+        //判断上下车地点有一个为空
+        else if(that.data.boardingPoint!=='请选择' && that.data.dropoffPoint!=='请选择'){
+            const that = this
         wx.navigateTo({
-            url: '../Viewing/Viewing',
+            url: '../Viewing/Viewing?boardingPoint='+that.data.boardingPoint+'&dropoffPoint='+that.data.dropoffPoint,
             success(res){
               console.log(res)
             },fail(err){
               console.error(err)
             }
         })
+        }else{
+            wx.showToast({
+                title: '请重新选择',
+                icon: 'error',
+                duration: 2000
+              })
+              return
+        }
+       
+        
+
     } else{
         // 未登录，弹出提示框并跳转到登录页面
         wx.showToast({ 
@@ -74,7 +99,7 @@ Page({
 
 
    
-  },
+  }
 
 
   })

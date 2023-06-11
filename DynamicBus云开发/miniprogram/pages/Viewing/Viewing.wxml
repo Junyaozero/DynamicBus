@@ -1,2 +1,16 @@
 <!--pages/Viewing/Viewing.wxml-->
-<text>pages/Viewing/Viewing.wxml</text>
+
+
+
+<view style="position: absolute; top: 200rpx; left: 120rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+<text>大巴车正在路上，请耐心排队等待</text> 
+</view>
+
+<view style="position: absolute; top: 350rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 50rpx;">  
+<text>上车地点：{{boardingPoint}}</text> 
+</view>
+
+<view style="position: absolute; top: 450rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 50rpx;">  
+<text>下车地点：{{dropoffPoint}}</text>
+</view>
+

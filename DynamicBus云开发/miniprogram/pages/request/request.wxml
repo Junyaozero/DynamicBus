@@ -11,14 +11,14 @@
    <!-- bindtap点击触发事件，点击下拉框可以出现下拉列表 -->
    <view class='list-msg2' bindtap='bindShowMsg' >
         <!-- 下拉框“---请选择---” -->
-        <text >{{tihuoWay}}</text>  
+        <text >{{boardingPoint}}</text>  
         <!-- 也可以<text>---请选择---</text> -->
    </view>
 
      <!-- select 判断是否显示隐藏下拉列表-->
      <view class="select_box" wx:if="{{select}}"> 
         <!-- 滚动条 -->
-        <scroll-view scroll-y="true" style="height: 220rpx;" class="h" scroll-with-animation="true">
+        <scroll-view scroll-y="true" style="height: 220rpx;" class="scroll-bar" scroll-with-animation="true">
 <!-- 下拉需要显示的列表   -->
 <!-- data-name 下拉列表里的内容 -->
  <view class="select_one" bindtap="mySelect" data-name="明德楼">明德楼</view>
@@ -40,14 +40,14 @@
  <view class='list-msg1'>下车地点</view>
 <!--下拉框 -->
    <view class='list-box2' bindtap='bindShowMsgTwo' >
-    <text >{{tihuoWayTwo}}</text>  
+    <text >{{dropoffPoint}}</text>  
    </view>
 <!-- 下拉需要显示的列表   -->
 <!-- select 判断是否显示隐藏 -->
 <!-- data-name 下拉列表里的内容 -->
      <view class="select2_box" wx:if="{{SelectTwo}}"> 
 
-        <scroll-view scroll-y="true" style="height: 220rpx;" class="h" scroll-with-animation="true">
+        <scroll-view scroll-y="true" style="height: 220rpx;" class="scroll-bar" scroll-with-animation="true">
 
  <view class="select_one" bindtap="mySelectTwo" data-name="明德楼">明德楼</view>
  <view class="select_one" bindtap="mySelectTwo" data-name="弘毅楼">弘毅楼</view>
