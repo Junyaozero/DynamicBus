@@ -99,10 +99,11 @@ Page({
             }else{ 
                 wx.showToast({ 
                     title: '用户名或密码错误',
-                    icon: 'error',
+                    icon: 'none',
                     //提示框显示2000ms
                     duration: 2000 
                 }) 
+                
             }
 
 
