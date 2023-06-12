@@ -3,16 +3,17 @@ Page({
 
     
     //页面的初始数据
+    
     data: {
-      select: false,  //先进行初始化，判断下拉列表是显示隐藏的
-      boardingPoint: '请选择',  //先初始化一个值（内容）
-      SelectTwo: false,  
-      dropoffPoint: '请选择' 
+        select: false,  //先进行初始化，判断下拉列表是显示隐藏的
+        boardingPoint: '请选择',  //先初始化一个值（内容）
+        SelectTwo: false,  
+        dropoffPoint: '请选择' 
     },
    
     
     //  点击事件
-    //  点击的时候控制下拉列表是显示的
+   //  点击的时候控制下拉列表是显示的
      //取反，类似开关操作
     bindShowMsg() {
       this.setData({
@@ -63,7 +64,6 @@ Page({
         
         //判断上下车地点有一个为空
         else if(that.data.boardingPoint!=='请选择' && that.data.dropoffPoint!=='请选择'){
-            const that = this
         wx.navigateTo({
             url: '../Viewing/Viewing?boardingPoint='+that.data.boardingPoint+'&dropoffPoint='+that.data.dropoffPoint,
             success(res){
