@@ -64,6 +64,10 @@ Page({
         //console.log(userName,userPwd)
         // 直接使用对象传递
         var resVlu = res.detail.value
+        // 添加isAdminOrDriver字段为number类型
+        resVlu.isAdminOrDriver = 0;
+        // 添加signTime字段为date类型
+        resVlu.signTime = new Date();
 
         db.collection("user_info").where({
             userName: userName

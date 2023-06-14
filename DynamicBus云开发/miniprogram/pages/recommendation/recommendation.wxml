@@ -1,0 +1,9 @@
+<view class="account">
+        <view class="title">巴士</view>
+            <view class="num">
+                <input name="busID" selectable="true" bindinput="busID" placeholder="请输入巴士序号" placeholder-style="color:#999999;"/>
+            </view>
+</view>
+<view class="hr"></view>
+<button class="btn" form-type="submit" disabled="{{disabled}}" type="{{btnstate}}" bindtap="look">确定</button>
+<view class="hr"></view>

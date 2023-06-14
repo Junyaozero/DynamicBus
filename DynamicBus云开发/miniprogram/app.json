@@ -9,7 +9,8 @@
       "pages/Viewing/Viewing",
       "pages/us/us",
       "pages/opinion/opinion",
-      "pages/xinxi/xinxi"
+      "pages/xinxi/xinxi",
+      "pages/recommendation/recommendation"
     ],
     "window":{
       "backgroundTextStyle":"light",

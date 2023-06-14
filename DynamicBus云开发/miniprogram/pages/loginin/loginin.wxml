@@ -3,7 +3,7 @@
     <view class="account">
         <view class="title">账号</view>
         <view class="num">
-            <input name="userName" selectable="true" bindinput="userName" placeholder="请输入手机号" placeholder-style="color:#999999;"/>
+            <input name="userName" selectable="true" bindinput="userName" placeholder="请输入用户名/手机号" placeholder-style="color:#999999;"/>
         </view>
     </view>
     <view class="hr"></view>

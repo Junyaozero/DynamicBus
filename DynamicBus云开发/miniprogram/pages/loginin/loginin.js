@@ -89,16 +89,36 @@ Page({
                 wx.showToast({ 
                 title: '登录成功', 
                 icon: 'success',
-                duration: 2000 
+                duration: 500 
                 }) 
-
-                //setTimeout函数来延迟跳转到登录页面,延迟2秒
-                setTimeout(function(){
-                    wx.switchTab({
-                    url: '/pages/request/request' 
-                });
-                }, 2000);
-                
+                // 判断是否为管理员或司机
+                if(res.data[0].isAdminOrDriver === 2){
+                    wx.showModal({
+                        title:'提示',
+                        content:'是否查看推荐路线？',
+                        success: function(res){
+                            if(res.confirm){
+                                wx.navigateTo({
+                                  url: '/pages/recommendation/recommendation',
+                                  success(res){
+                                      console.log(res)
+                                  },
+                                  fail(err){
+                                      console.err(err)
+                                  }
+                                })
+                            }
+                        }
+                    })
+                }else{
+                     //setTimeout函数来延迟跳转到登录页面,延迟2秒
+                    setTimeout(function(){
+                        wx.switchTab({
+                        url: '/pages/request/request' 
+                    });
+                    }, 2000);
+                }
+               
             }else{ 
                 wx.showToast({ 
                     title: '用户名或密码错误',
