@@ -9,6 +9,8 @@
 <view class="hr"></view>
 
 <view class="recommendation" wx:if="{{hasRecommendation}}">
-  <view class="title">推荐路线：</view>
-  {{recommendation}}
+    <view class="title">推荐路线：</view>
+    <view class="route">
+        <text wx:for="{{recommendation}}" wx:key="{{index}}" class="location">{{item}} → </text>...
+    </view>
 </view>
