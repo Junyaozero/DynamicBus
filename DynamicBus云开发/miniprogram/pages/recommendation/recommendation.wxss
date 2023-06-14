@@ -46,3 +46,14 @@
 .login view{
     margin: 0 auto;
 }
+.recommendation {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #000000;
+  }
+  .recommendation .title {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+  }

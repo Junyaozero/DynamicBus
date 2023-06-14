@@ -7,3 +7,8 @@
 <view class="hr"></view>
 <button class="btn" form-type="submit" disabled="{{disabled}}" type="{{btnstate}}" bindtap="look">确定</button>
 <view class="hr"></view>
+
+<view class="recommendation" wx:if="{{hasRecommendation}}">
+  <view class="title">推荐路线：</view>
+  {{recommendation}}
+</view>

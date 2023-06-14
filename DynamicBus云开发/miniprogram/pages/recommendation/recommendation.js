@@ -1,4 +1,4 @@
-// pages/recommendation/recommendation.js
+const db = wx.cloud.database();
 Page({
 
     /**
@@ -8,6 +8,8 @@ Page({
         disabled:true,//丧失能力
         btnstate:"default",
         busID: "",
+        hasRecommendation: false, // 是否有推荐路线
+        recommendation: "" // 推荐路线
     },
 
     // 控制按钮失效
@@ -34,6 +36,52 @@ Page({
         });
         this.ControlButton();
       },
+
+      // 查看当前busID的推荐路线
+      look(res){
+        console.log(res)
+        wx.showLoading({
+          title: '数据加载中……',
+          mask:true
+        })
+        wx.cloud.callFunction({
+          name: 'getRecommendation',
+          data: {
+            busID: this.data.busID
+          },
+          success: (res) => {
+            console.log(res)
+            wx.hideLoading()
+            const result = res.result
+            if (result.hasRecommendation) {
+              this.setData({
+                hasRecommendation: true,
+                recommendation: result.recommendation
+              })
+            } else {
+              this.setData({
+                hasRecommendation: false
+              })
+              wx.showToast({ 
+                title: '巴士信息错误',
+                icon: 'none',
+                duration: 2000 
+              }) 
+            }
+          },
+          fail: (err) => {
+            console.error(err)
+            wx.hideLoading()
+            wx.showToast({ 
+              title: '数据加载失败',
+              icon: 'none',
+              duration: 2000 
+            }) 
+          }
+        })
+      },
+      
+
 
     /**
      * 生命周期函数--监听页面加载
