@@ -35,6 +35,16 @@
       </view>
       <view class="right">></view>
     </button>
+
+    
+    <button class="row" style="width: 100%;border-bottom: none;" bindtap="cancledeng">
+      <view class="left">
+        <icon class="icon-small" type="success" size="16"></icon>
+        <text class="text">退出登录</text>
+      </view>
+      <view class="right">></view>
+    </button>
+
   </view>
   
 </view>

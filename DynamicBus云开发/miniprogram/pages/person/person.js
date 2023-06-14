@@ -53,24 +53,41 @@ Page({
       })
       console.log('关于我们监听');
     },
-    // 退出监听
-    exitClick() {
-      let that = this;
-      wx.showModal({
-        title: '提示',
-        content: '确定退出登录吗？',
-        success(res) {
-          if (res.confirm) {
+    
+    
+         //退出登录
+         cancledeng(){
+          let that=this
+        
+          wx.showModal({   //提示框
+            title:"退出登录",
+            content:"下次再来哦！",
+               
+          success(res){
+          if(res.confirm==true){
+          
+            wx.removeStorageSync('user')//删除用户缓存
+            wx.removeStorageSync('isLogin')
             that.setData({
               login: {
-                show: false,
-                avatar: 'https://img0.baidu.com/it/u=3204281136,1911957924&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
-              }
-            })
+                  show: false,
+               
+                }
+              
+          })
+        
+          wx.showToast({   //提示
+          title:"已退出",
+          icon:"none"
+          })
+        
           }
-        }
-      })
-    },
+          }
+        
+          
+        })
+          
+          },
   
     /**
      * 生命周期函数--监听页面加载
