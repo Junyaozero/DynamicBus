@@ -1,21 +1,23 @@
 
 <view class="top-bg"></view>
 <view class="box">
-<!-- 头像 -->
+<!-- 头像 :小程序中展示一个头部盒子，其中包含一个选择头像的按钮和一个显示登录状态的提示-->
 <view class="head-box">
-    <button open-type="chooseAvatar" class="avatar" bindchooseavatar="chooseAvatar">
+    <button open-type="chooseAvatar" class="avatar" 
+    bindchooseavatar="chooseAvatar">
       <image class="head-img" src="{{login.avatar}}" mode="widthFix"></image>
     </button>
+     <!--数据绑定语法，用来根据用户是否已登录来显示不同的提示语句-->
     <view class="tip">{{login.show?'欢迎使用':'请登录！'}}</view><!-- 显示用户登录状态 -->
   </view>
 
 
   <!-- 第一部分列表 -->
   <view>
-    <button class="row" style="width: 100%;" bindtap="basicClick">
-      <view class="left">
-        <icon class="icon-small" type="success" size="16"></icon>
-        <text class="text">基本信息</text>
+    <button class="row" style="width: 100%;" bindtap="basicClick"><!-- 定义一个名为 row 的按钮，设置宽度为 100% ，并绑定 basicClick 事件 -->
+      <view class="left"><!-- 定义一个名为 left 的视图容器，用于包含图标和文本 -->
+        <icon class="icon-small" type="success" size="16"></icon> <!-- 定义一个名为 icon-small 的图标，类型为 success ，尺寸为 16px -->
+        <text class="text">基本信息</text><!-- 定义一个名为 text 的文本量，用于显示基本信息文字 -->
       </view>
       <view class="right">></view>
     </button>
@@ -42,4 +44,5 @@
 <view class="footer">
   <text>Dynamic Bus Demo</text>
 </view>
+
 

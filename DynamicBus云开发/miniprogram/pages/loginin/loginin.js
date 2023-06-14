@@ -82,6 +82,9 @@ Page({
             wx.hideLoading()
             if(res.data.length > 0){ 
                 // 登录成功，保存登录状态到本地存储中
+
+                wx.setStorageSync('user',res.data);           //11111111111
+
                 wx.setStorageSync('isLogin', true);
                 wx.showToast({ 
                 title: '登录成功', 

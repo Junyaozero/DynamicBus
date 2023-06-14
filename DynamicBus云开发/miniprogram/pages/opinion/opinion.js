@@ -1,3 +1,5 @@
+//创建了一个指向云数据库的实例 
+const db = wx.cloud.database()
 
 Page({
   /**

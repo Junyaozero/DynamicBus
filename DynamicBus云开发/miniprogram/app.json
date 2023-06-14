@@ -8,8 +8,8 @@
       "pages/findPwd/findPwd",
       "pages/Viewing/Viewing",
       "pages/us/us",
-      "pages/opinion/opinion"
-  
+      "pages/opinion/opinion",
+      "pages/xinxi/xinxi"
     ],
     "window":{
       "backgroundTextStyle":"light",

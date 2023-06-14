@@ -1,0 +1,60 @@
+<!--index.wxml-->
+
+<view class="add-page">
+
+<!-- 表单 -->
+
+
+
+<view class="address-block">
+
+
+
+
+
+
+<view class="address-info">
+
+<view class="address-title" ><text style="color: red;font-weight: bold;">*</text>账号</view>:
+
+<view class="address-content">
+
+<view>{{li.userName}}</view>
+
+</view>
+
+</view>
+
+
+
+
+<view class="address-info">
+
+<view class="address-title"><text style="color: red;font-weight: bold;">*</text>密码</view>:
+
+<view class="address-content">
+<view>{{li.userPwd}}</view>
+
+
+</view>
+
+</view>
+
+
+
+
+
+
+
+
+</view>
+
+
+
+</view>
+
+
+
+
+
+
