@@ -12,6 +12,9 @@ Page({
       dropoffPoint,
     })
 
+    let date = new Date(new Date().getTime());
+    let Time = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+
     //获取本地缓存中‘user’存入userName
     var user=wx.getStorageSync('user')
     var user1 = user[0]
@@ -31,7 +34,7 @@ Page({
                 data: {
                   boardingPoint:boardingPoint,
                   dropoffPoint:dropoffPoint,
-                  requestTime: new Date()
+                  requestTime: new Date(new Date().getTime()).getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
                 }
             })
               } else {
@@ -41,7 +44,7 @@ Page({
                       userName: this.data.userName,
                       boardingPoint:boardingPoint,
                       dropoffPoint:dropoffPoint,
-                      requestTime: new Date()
+                      requestTime: Time
                     }
                   }).then(res => {
                     console.log(res)
