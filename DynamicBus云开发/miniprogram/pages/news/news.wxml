@@ -1,5 +1,5 @@
 <view class="row" wx:for="{{dataList}}" wx:key="index">
-    <view class="title">{{index+1}}. 时间：{{item.requsetTime}}</view>
+    <view class="title">{{index+1}}. 时间：{{item.requestTime}}</view>
     <view>
         <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
         上车地点：{{item.boardingPoint}}
