@@ -18,7 +18,7 @@
      <!-- select 判断是否显示隐藏下拉列表-->
      <view class="select_box" wx:if="{{select}}"> 
         <!-- 滚动条 -->
-        <scroll-view scroll-y="true" style="height: 220rpx;" class="scroll-bar" scroll-with-animation="true">
+    <scroll-view scroll-y="true" style="height: 220rpx;" class="scroll-bar" scroll-with-animation="true">
 <!-- 下拉需要显示的列表   -->
 <!-- data-name 下拉列表里的内容 -->
  <view class="select_one" bindtap="mySelect" data-name="明德楼">明德楼</view>
@@ -29,7 +29,7 @@
  <view class="select_one" bindtap="mySelect" data-name="求是楼">求是楼</view>
  <view class="select_one" bindtap="mySelect" data-name="南苑">南苑</view>
  <view class="select_one" bindtap="mySelect" data-name="校医务室">校医务室</view>
- <view class="select_one" bindtap="mySelect" data-name="二饭">二饭</view>
+ <view class="select_one" bindtap="mySelect" data-name="第二食堂">第二食堂</view>
 </scroll-view>
    </view> 
 </view>
@@ -45,9 +45,9 @@
 <!-- 下拉需要显示的列表   -->
 <!-- select 判断是否显示隐藏 -->
 <!-- data-name 下拉列表里的内容 -->
-     <view class="select2_box" wx:if="{{SelectTwo}}"> 
+    <view class="select2_box" wx:if="{{SelectTwo}}"> 
 
-        <scroll-view scroll-y="true" style="height: 220rpx;" class="scroll-bar" scroll-with-animation="true">
+    <scroll-view scroll-y="true" style="height: 220rpx;" class="scroll-bar" scroll-with-animation="true">
 
  <view class="select_one" bindtap="mySelectTwo" data-name="明德楼">明德楼</view>
  <view class="select_one" bindtap="mySelectTwo" data-name="弘毅楼">弘毅楼</view>
@@ -57,7 +57,7 @@
  <view class="select_one" bindtap="mySelectTwo" data-name="求是楼">求是楼</view>
  <view class="select_one" bindtap="mySelectTwo" data-name="南苑">南苑</view>
  <view class="select_one" bindtap="mySelectTwo" data-name="校医务室">校医务室</view>
- <view class="select_one" bindtap="mySelectTwo" data-name="二饭">二饭</view>
+ <view class="select_one" bindtap="mySelectTwo" data-name="第二食堂">第二食堂</view>
 
 </scroll-view>
 

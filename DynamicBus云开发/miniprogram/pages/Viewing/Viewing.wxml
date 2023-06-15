@@ -2,15 +2,61 @@
 
 
 
-<view style="position: absolute; top: 200rpx; left: 120rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+<view style="position: absolute; top: 50rpx; left: 120rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
 <text>大巴车正在路上，请耐心排队等待</text> 
 </view>
 
-<view style="position: absolute; top: 350rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 50rpx;">  
+<view style="position: absolute; top: 150rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 50rpx;">  
 <text>上车地点：{{boardingPoint}}</text> 
 </view>
 
-<view style="position: absolute; top: 450rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 50rpx;">  
+<view style="position: absolute; top: 250rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 50rpx;">  
 <text>下车地点：{{dropoffPoint}}</text>
 </view>
 
+
+<view style="position: absolute; top: 390rpx; left: 160rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>目前各站点排队人数</view>
+</view>
+
+
+<view style="position: absolute; top: 830rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>明德楼的总数量为：{{count1}}</view>
+</view>
+
+<view style="position: absolute; top: 530rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>弘毅楼的总数量为：{{count2}}</view>
+</view>
+
+<view style="position: absolute; top: 590rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>天佑楼的总数量为：{{count3}}</view>
+</view>
+
+<view style="position: absolute; top: 650rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>艺悦楼的总数量为：{{count4}}</view>
+</view>
+
+<view style="position: absolute; top: 710rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>知行楼的总数量为：{{count5}}</view>
+</view>
+
+<view style="position: absolute; top: 770rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>求是楼的总数量为：{{count6}}</view>
+</view>
+
+<view style="position: absolute; top: 470rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>南苑的总数量为：{{count7}}</view>
+</view>
+
+<view style="position: absolute; top: 890rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>校医务室的总数量为：{{count8}}</view>
+</view>
+
+<view style="position: absolute; top: 950rpx; left: 170rpx; font-family: '黑体'; font-weight: bold; font-size: 35rpx;">  
+    <view>第二食堂的总数量为：{{count9}}</view>
+</view>
+
+
+ <!-- <view style="margin-top: 700rpx; display: flex;">
+    <button bindtap="Viewing" class="btn" type="primary" >总人数</button> 
+</view> -->
