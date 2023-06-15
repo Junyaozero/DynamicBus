@@ -10,6 +10,7 @@ Page({
         disabled:true,//丧失能力
         btnstate:"default",
         busID: "",
+        userName:"",
         hasRecommendation: false, // 是否有推荐路线
         recommendation: "", // 推荐路线
         driverLocation: {
@@ -150,11 +151,17 @@ Page({
 
     // 调用云函数更新司机位置信息
     updateDriverLocation(latitude, longitude) {
+        var user=wx.getStorageSync('user')
+        console.log(user[0].userName)
+        this.setData({
+            userName:user[0].userName
+        })
         wx.cloud.callFunction({
             name: 'updateDriverLocation',
             data: {
                 latitude: latitude,
-                longitude: longitude
+                longitude: longitude,
+                userName: this.data.userName
             },
             success: (res) => {
                 console.log('司机位置更新成功', res)
