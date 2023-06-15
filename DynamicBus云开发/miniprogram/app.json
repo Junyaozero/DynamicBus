@@ -13,10 +13,13 @@
       "pages/recommendation/recommendation"
     ],
     "window":{
-      "backgroundTextStyle":"light",
+      "backgroundTextStyle":"dark",
       "navigationBarBackgroundColor": "#fff",
       "navigationBarTitleText": "DynamicBus",
-      "navigationBarTextStyle":"black"
+      "navigationBarTextStyle":"black",
+      "enablePullDownRefresh": true,
+      "backgroundColor": "#efefef",
+      "onReachBottomDistance": 50
     },
     "permission": {
         "scope.userLocation": {

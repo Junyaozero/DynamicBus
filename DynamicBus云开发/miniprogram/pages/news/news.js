@@ -26,7 +26,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getData()
+        this.getData(6,0)
     },
    
     /**
@@ -61,7 +61,10 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-
+        console.log('触发了下拉刷新')
+        wx.redirectTo({
+            url: '/pages/news/news',
+        });
     },
 
     /**
