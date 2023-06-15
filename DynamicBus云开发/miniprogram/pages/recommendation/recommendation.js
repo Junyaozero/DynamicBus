@@ -152,7 +152,6 @@ Page({
     // 调用云函数更新司机位置信息
     updateDriverLocation(latitude, longitude) {
         var user=wx.getStorageSync('user')
-        console.log(user[0].userName)
         this.setData({
             userName:user[0].userName
         })
@@ -172,16 +171,17 @@ Page({
         })
     },
     // 调用云函数计算最优推荐路线
-    calculateRecommendation(latitude, longitude) {
+    calculateRecommendation() {
+        var user=wx.getStorageSync('user')
+        this.setData({
+            userName:user[0].userName
+        })
         wx.cloud.callFunction({
             name: 'calculateRecommendation',
             data: {
                 busID: this.data.busID,
-                driverLocation: {
-                    latitude,
-                    longitude
-                },
-                numOfPeople: 0 // 车上人数
+                numOfPeople: 0, // 车上人数
+                userName: this.data.userName
             },
             success: (res) => {
                 console.log('最优推荐路线计算成功', res)

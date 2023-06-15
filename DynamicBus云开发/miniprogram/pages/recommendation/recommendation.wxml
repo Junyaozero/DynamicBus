@@ -11,6 +11,6 @@
 <view class="recommendation" wx:if="{{hasRecommendation}}">
     <view class="title">推荐路线：</view>
     <view class="route">
-        <text wx:for="{{recommendation}}" wx:key="{{index}}" class="location">{{item}} → </text>...
+        <text wx:for="{{recommendation}}" class="location">{{item}} → </text>...
     </view>
 </view>

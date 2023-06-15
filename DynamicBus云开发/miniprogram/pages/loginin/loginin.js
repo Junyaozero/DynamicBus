@@ -91,8 +91,29 @@ Page({
                 icon: 'success',
                 duration: 500 
                 }) 
-                // 判断是否为管理员或司机
-                if(res.data[0].isAdminOrDriver === 2){
+                // 判断是否为管理员
+                if(res.data[0].isAdminOrDriver === 1){
+                    wx.showModal({
+                        title:'提示',
+                        content:'欢迎管理员登录',
+                        success: function(res){
+                            if(res.confirm){
+                                wx.switchTab({
+                                    url: '/pages/person/person',
+                                  success(res){
+                                      console.log(res)
+                                  },
+                                  fail(err){
+                                      console.err(err)
+                                  }
+                                })
+                            }
+                        }
+                    })
+                }
+
+                // 判断是否为司机
+                else if(res.data[0].isAdminOrDriver === 2){
                     wx.showModal({
                         title:'提示',
                         content:'是否查看推荐路线？',

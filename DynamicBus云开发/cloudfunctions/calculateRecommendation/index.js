@@ -30,9 +30,21 @@ function deg2rad(deg) {
 // 云函数入口函数
 exports.main = async (event, context) => {
     var busID = event.busID;
-    try {
+    var userName = event.userName;
+
+    console.log(busID)
+    console.log(userName)
+    
         // 获取司机当前位置经纬度
-        var { latitude, longitude } = event.driverLocation
+        var location = await db.collection('driver_info').where({
+            driverName: userName
+        }).get();
+        var data = location.data[0]
+        var latitude = data.driverLatitude
+        var longitude = data.driverLongitude
+
+        console.log(latitude)
+        console.log(longitude)
 
         // 查询所有站点信息，储存到对象中
         var { data: stations } = await db.collection('station_info').get()
@@ -56,6 +68,8 @@ exports.main = async (event, context) => {
                 dropoffPoint: stationName
             }).count()
 
+
+
             // 计算优先级
             var priority = 0.2 * boardingInfo + 0.1 * event.numOfPeople * dropoffInfo + 0.7 * distance
 
@@ -78,19 +92,15 @@ exports.main = async (event, context) => {
                 busID: busID
             }).update({
             data: {
-                // 转换为字符串格式; slice(1, -1)去掉前后双引号
-                recommendation: JSON.stringify(recommendation).slice(1, -1)
+                recommendation: recommendation
             }
         })
+            return await{
+                recommendation: recommendation
+            }
+        
 
-        return {
-            success: true
-        }
-    } catch (err) {
-        console.error(err)
-        return {
-            success: false
-        }
-    }
+
+    
 }
 
