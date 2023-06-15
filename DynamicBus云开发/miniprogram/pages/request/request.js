@@ -23,7 +23,7 @@ Page({
     })
   },
 
-  // 选择上车、下车地点并赋值到这个变量到boardingPoint、dropoffPoint，
+  // 选择上车、下车地点并赋值到boardingPoint、dropoffPoint，
   // 选择结束，隐藏下拉列表
   mySelect(e) {
     var name = e.currentTarget.dataset.name
@@ -31,7 +31,6 @@ Page({
       boardingPoint: name,
       select: false
     })
-
   },
   mySelectTwo(e) {
     var name = e.currentTarget.dataset.name
