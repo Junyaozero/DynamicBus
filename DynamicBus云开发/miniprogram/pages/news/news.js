@@ -4,7 +4,7 @@ Page({
       dataList:[]
     },
 
-    getData(num=6,page=0){
+    getData(num=8,page=0){
         wx.cloud.callFunction({
             name:"getRequestList",
             data:{
@@ -26,7 +26,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getData(6,0)
+        this.getData(8,0)
     },
    
     /**
@@ -72,7 +72,7 @@ Page({
      */
     onReachBottom() { // 触底更新
         var page=this.data.dataList.length
-        this.getData(6,page)
+        this.getData(8,page)
     },
 
     /**
